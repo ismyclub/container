@@ -1,5 +1,5 @@
 # https://docs.github.com/en/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions
-name: SignUp Docker image
+name: Join Docker image
 
 on: [workflow_dispatch]
 
@@ -32,14 +32,14 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-signup
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-join
 
       - name: Build and push Docker image
         id: push
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: ./src/signup/Dockerfile
+          file: ./src/join/Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
@@ -49,6 +49,6 @@ jobs:
       - name: Generate artifact attestation
         uses: actions/attest-build-provenance@v1
         with:
-          subject-name: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-signup
+          subject-name: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-join
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true

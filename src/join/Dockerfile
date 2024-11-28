@@ -8,8 +8,8 @@ ENV LOG_LEVEL="info"
 
 RUN npm config set "@ismyclub:registry" https://npm.pkg.github.com/ \
     && npm config set "//npm.pkg.github.com/:_authToken" $NPM_TOKEN \
-    && npm install -g @ismyclub/app.sign-up
+    && npm install -g @ismyclub/app.join
 
 EXPOSE 3000
 
-CMD ["sign-up"]
+CMD ["join"]
