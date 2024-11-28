@@ -1,0 +1,16 @@
+{
+  "name": "root",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "bump-deps": "ncu -u --deep",
+    "format": "prettier --write \"**/*.{ts,tsx,md,json}\"",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
+    "npm-check-updates": "^17.1.11",
+    "prettier": "^3.4.1"
+  }
+}
