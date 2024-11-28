@@ -4,12 +4,10 @@
 
 ## Developer Quick start
 
-```bash
-# Install dependencies
-pnpm install
-```
-
-## Developer Setup
+1. Go to https://github.com/ismyclub/container/actions
+2. Select the action to run
+3. Manually run the action
+4. Verify by looking at https://github.com/orgs/ismyclub/packages
 
 ## CI/CD Setup
 
@@ -27,4 +25,4 @@ To create/rotate the token:
 
 ## References
 
-- [npm-config](https://docs.npmjs.com/cli/v8/commands/npm-config)
+- [Publishing and installing a package with GitHub Actions](https://docs.github.com/en/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions)
