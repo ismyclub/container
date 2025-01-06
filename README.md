@@ -18,7 +18,7 @@ The CI/CD pipeline for this repository uses a Personal Access Token with the cor
 To create/rotate the token:
 
 1. Navigate to the [User Settings / Access Tokens page](https://github.com/settings/tokens) and select 'Generate new token' | 'Generate new token (classic)'.
-2. Add '@ismyclub/container - npm install' as note, 'No Expiration' as expiration, 'read:packages' as scope, and click the 'Generate token' button.
+2. Add '@ismyclub/container - npm publish' as note, 'No Expiration' as expiration, 'read:packages' as scope, and click the 'Generate token' button.
 3. Copy the value of the new token into the **NPM_TOKEN** action secret in the [Actions secrets and variables page](https://github.com/ismyclub/tools/settings/secrets/actions).
 
 > Note: If other repositories are using the same **NPM_TOKEN** in CI/CD, be sure to change them too.
