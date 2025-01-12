@@ -18,6 +18,15 @@ jobs:
       id-token: write
 
     steps:
+      - name: Get Secrets
+        uses: Infisical/secrets-action@v1.0.7
+        with:
+          client-id: ${{ secrets.MACHINE_IDENTITY_CLIENT_ID }}
+          client-secret: ${{ secrets.MACHINE_IDENTITY_CLIENT_SECRET }}
+          env-slug: prod
+          project-slug: main-qx-mr
+          secret-path: /ismyclub
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -44,7 +53,7 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
-            NPM_TOKEN=${{ secrets.NPM_TOKEN }}
+            NPM_TOKEN=${{ env.NPM_READ_TOKEN }}
 
       - name: Generate artifact attestation
         uses: actions/attest-build-provenance@v1
