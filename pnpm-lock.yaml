@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@studio-75/sdk.container':
-        specifier: ^1.0.3
-        version: 1.0.3
+        specifier: ^1.0.4
+        version: 1.0.4
       husky:
         specifier: ^9.1.7
         version: 9.1.7
@@ -177,8 +177,8 @@ packages:
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
     engines: {node: '>=12'}
 
-  '@studio-75/sdk.container@1.0.3':
-    resolution: {integrity: sha512-E3s2QDe6K4GSQVJR0orbVnsbsu5odmbBV9YvgVkPCyKrx2lAUm+SAfAY5GG8JJtiRp+0nvCDhNN8CFFjy7Lz5g==, tarball: https://npm.pkg.github.com/download/@studio-75/sdk.container/1.0.3/a2c17115f0f676e09bf30fcd51c3a88b2f935436}
+  '@studio-75/sdk.container@1.0.4':
+    resolution: {integrity: sha512-VgnJ5HJLwvI/C53O5bZ3YRnjHP4wZpGtH/OZtTUUPeS83l0VQXq15oM8SS7LsiEV2i0ap/csKK+qH5dDMesMKw==, tarball: https://npm.pkg.github.com/download/@studio-75/sdk.container/1.0.4/0c33b314bea5d2948bb1ff918f86901d89d3194f}
 
   '@types/lodash@4.17.15':
     resolution: {integrity: sha512-w/P33JFeySuhN6JLkysYUK2gEmy9kHHFN7E8ro0tkfmlDOgxBDzWEZ/J8cWA+fHqFevpswDTFZnDx+R9lbL6xw==}
@@ -613,7 +613,7 @@ snapshots:
       wrap-ansi: 8.1.0
       wrap-ansi-cjs: wrap-ansi@7.0.0
 
-  '@studio-75/sdk.container@1.0.3':
+  '@studio-75/sdk.container@1.0.4':
     dependencies:
       '@types/lodash': 4.17.15
       colorette: 2.0.20
