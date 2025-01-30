@@ -9,7 +9,7 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@studio-75/sdk.container": "^1.0.4",
+    "@studio-75/sdk.container": "^1.0.5",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
     "npm-check-updates": "^17.1.14",
