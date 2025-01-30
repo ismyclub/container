@@ -4,13 +4,16 @@
   "private": true,
   "scripts": {
     "bump-deps": "ncu -u --deep",
+    "codegen": "tsx ./.codegen/index.ts",
     "format": "prettier --write \"**/*.{ts,tsx,md,json}\"",
     "prepare": "husky"
   },
   "devDependencies": {
+    "@studio-75/sdk.container": "^1.0.3",
     "husky": "^9.1.7",
-    "lint-staged": "^15.2.10",
-    "npm-check-updates": "^17.1.11",
-    "prettier": "^3.4.1"
+    "lint-staged": "^15.4.3",
+    "npm-check-updates": "^17.1.14",
+    "prettier": "^3.4.2",
+    "tsx": "^4.19.2"
   }
 }
