@@ -12,6 +12,30 @@ const npm = {
   scopes: ['studio-75', 'ismyclub'],
 }
 
+const website = {
+  name: 'Website',
+  package: '@ismyclub/app.website',
+  command: 'website',
+}
+
+const cms = {
+  name: 'CMS',
+  package: '@ismyclub/app.cms',
+  command: 'cms',
+}
+
+const fairpark = {
+  name: 'Fairpark',
+  package: '@ismyclub/app.fairpark',
+  command: 'fairpark',
+}
+
+const signUp = {
+  name: 'Sign Up',
+  package: '@ismyclub/app.sign-up',
+  command: 'sign-up',
+}
+
 const standardConfig = {
   LOG_LEVEL: 'info',
 };
@@ -26,38 +50,37 @@ const pgConfig = {
 
 const run = async () => {
   await onboard().run();
-  const npmSettings = npmConfig().setRegistry(npm.registry).setTokenName(npm.tokenName).addScopes(npm.scopes).create();
 
   await dockerNodeApp()
     .setInfisicalConfig(infisicalConfig().setProjectSlug(infisical.projectSlug).setSecretPath(infisical.secretPath).create())
     .addNodeApp(
       dockerNodeAppConfig()
-        .addNpmConfig(npmSettings)
-        .setAppConfig(appConfig().setName('CMS').setPackage('@ismyclub/app.cms').setCommand('cms').create())
+        .addNpmConfig(npmConfig().setRegistry(npm.registry).setTokenName(npm.tokenName).addScopes(npm.scopes).create())
+        .setAppConfig(appConfig().setName(cms.name).setPackage(cms.package).setCommand(cms.command).create())
         .addEnvValues({ ...standardConfig, ...pgConfig })
         .setExposePort(3000)
         .create()
     )
     .addNodeApp(
       dockerNodeAppConfig()
-        .addNpmConfig(npmSettings)
-        .setAppConfig(appConfig().setName('Fairpark').setPackage('@ismyclub/app.fairpark').setCommand('fairpark').create())
+        .addNpmConfig(npmConfig().setRegistry(npm.registry).setTokenName(npm.tokenName).addScopes(npm.scopes).create())
+        .setAppConfig(appConfig().setName(fairpark.name).setPackage(fairpark.package).setCommand(fairpark.command).create())
         .addEnvValues({ ...standardConfig, ...pgConfig })
         .setExposePort(3000)
         .create()
     )
     .addNodeApp(
       dockerNodeAppConfig()
-        .addNpmConfig(npmSettings)
-        .setAppConfig(appConfig().setName('Sign Up').setPackage('@ismyclub/app.sign-up').setCommand('sign-up').create())
+        .addNpmConfig(npmConfig().setRegistry(npm.registry).setTokenName(npm.tokenName).addScopes(npm.scopes).create())
+        .setAppConfig(appConfig().setName(signUp.name).setPackage(signUp.package).setCommand(signUp.command).create())
         .addEnvValues({ ...standardConfig, ...pgConfig })
         .setExposePort(3000)
         .create()
     )
     .addNodeApp(
       dockerNodeAppConfig()
-        .addNpmConfig(npmSettings)
-        .setAppConfig(appConfig().setName('Website').setPackage('@ismyclub/app.website').setCommand('website').create())
+        .addNpmConfig(npmConfig().setRegistry(npm.registry).setTokenName(npm.tokenName).addScopes(npm.scopes).create())
+        .setAppConfig(appConfig().setName(website.name).setPackage(website.package).setCommand(website.command).create())
         .addEnvValues(standardConfig)
         .addEnvValues(pgConfig)
         .setExposePort(3000)
