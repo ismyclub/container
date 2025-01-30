@@ -27,6 +27,7 @@ jobs:
           env-slug: prod
           project-slug: main-qx-mr
           secret-path: /ismyclub
+          recursive: true
 
       - name: Checkout repository
         uses: actions/checkout@v4

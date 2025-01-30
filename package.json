@@ -6,10 +6,12 @@
     "bump-deps": "ncu -u --deep",
     "codegen": "tsx ./.codegen/index.ts",
     "format": "prettier --write \"**/*.{ts,tsx,md,json}\"",
+    "onboard": "tsx ./.onboard/index.js",
     "prepare": "husky"
   },
   "devDependencies": {
-    "@studio-75/sdk.container": "^1.0.5",
+    "@studio-75/sdk.container": "^1.0.6",
+    "@studio-75/sdk.onboard": "^1.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
     "npm-check-updates": "^17.1.14",

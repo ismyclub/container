@@ -1,0 +1,22 @@
+{
+  "$schema": "./config.schema.json",
+  "secrets": {
+    "apiUrl": "https://us.infisical.com/api",
+    "clientId": "7bb0d1f9-9610-41a8-9272-ada2ee759dc7"
+  },
+  "npm": {
+    "registry": "https://npm.pkg.github.com/",
+    "scopes": [
+      "@studio-75"
+    ],
+    "secret": {
+      "projectId": "f74e424c-d04a-423f-a552-703c0460f025",
+      "environment": "prod",
+      "secretPath": "/local",
+      "tags": [
+        "node"
+      ]
+    }
+  },
+  "packages": []
+}

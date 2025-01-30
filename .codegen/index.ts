@@ -1,4 +1,5 @@
 import { appConfig, dockerNodeApp, dockerNodeAppConfig, infisicalConfig, npmConfig } from '@studio-75/sdk.container';
+import { onboard } from '@studio-75/sdk.onboard';
 
 const infisical = {
   projectSlug: 'main-qx-mr',
@@ -24,6 +25,7 @@ const pgConfig = {
 };
 
 const run = async () => {
+  await onboard().run();
   const npmSettings = npmConfig().setRegistry(npm.registry).setTokenName(npm.tokenName).addScopes(npm.scopes).create();
 
   await dockerNodeApp()
