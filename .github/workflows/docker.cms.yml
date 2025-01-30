@@ -25,8 +25,8 @@ jobs:
           client-id: ${{ secrets.MACHINE_IDENTITY_CLIENT_ID }}
           client-secret: ${{ secrets.MACHINE_IDENTITY_CLIENT_SECRET }}
           env-slug: prod
-          project-slug: main-qx-mr
-          secret-path: /ismyclub
+          project-slug: execution-environments-v5w-q
+          secret-path: /github
           recursive: true
 
       - name: Checkout repository
