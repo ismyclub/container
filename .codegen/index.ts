@@ -1,6 +1,6 @@
+import { nodeAppDockerfile } from '@studio-75/sdk.dockerfile.node-app';
+import { nodeAppDockerGitHubAction } from '@studio-75/sdk.github-action.docker.node-app';
 import { onboard } from '@studio-75/sdk.onboard';
-import { dockerfileNodeApp } from '@studio-75/sdk.dockerfile.node-app';
-import { dockerGitHubAction } from '@studio-75/sdk.github-action.docker.node-app';
 
 const envStandard = {
   LOG_LEVEL: 'info',
@@ -24,8 +24,8 @@ const appSignUp = { name: 'Sign Up', package: '@ismyclub/app.sign-up', command: 
 
 const run = async () => {
   await onboard();
-  await dockerfileNodeApp({ npmSettings, apps: [appWebsite, appCms, appFairpark, appSignUp] });
-  await dockerGitHubAction({ infisical, appNames: [appWebsite.name, appCms.name, appFairpark.name, appSignUp.name] });
+  await nodeAppDockerfile({ npmSettings, apps: [appWebsite, appCms, appFairpark, appSignUp] });
+  await nodeAppDockerGitHubAction({ infisical, appNames: [appWebsite.name, appCms.name, appFairpark.name, appSignUp.name] });
 };
 
 run();
