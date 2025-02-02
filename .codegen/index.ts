@@ -15,7 +15,7 @@ const envDatabase = {
 };
 
 const infisical = { projectSlug: 'execution-environments-v5w-q', secretPath: '/github' };
-const npmSettings = { registry: 'https://npm.pkg.github.com/', scopes: ['studio-75', 'ismyclub'] };
+const npm = { registry: 'https://npm.pkg.github.com/', scopes: ['studio-75', 'ismyclub'] };
 const env = { ...envStandard, ...envDatabase };
 const appWebsite = { name: 'Website', package: '@ismyclub/app.website', command: 'website', env };
 const appCms = { name: 'CMS', package: '@ismyclub/app.cms', command: 'cms', env };
@@ -24,7 +24,7 @@ const appSignUp = { name: 'Sign Up', package: '@ismyclub/app.sign-up', command: 
 
 const run = async () => {
   await onboard();
-  await nodeAppDockerfile({ npmSettings, apps: [appWebsite, appCms, appFairpark, appSignUp] });
+  await nodeAppDockerfile({ npm, apps: [appWebsite, appCms, appFairpark, appSignUp] });
   await nodeAppDockerGitHubAction({ infisical, appNames: [appWebsite.name, appCms.name, appFairpark.name, appSignUp.name] });
 };
 

@@ -10,9 +10,9 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@studio-75/sdk.dockerfile.node-app": "^1.0.7",
-    "@studio-75/sdk.github-action.docker.node-app": "^1.0.6",
-    "@studio-75/sdk.onboard": "^1.0.4",
+    "@studio-75/sdk.dockerfile.node-app": "^1.0.9",
+    "@studio-75/sdk.github-action.docker.node-app": "^1.0.8",
+    "@studio-75/sdk.onboard": "^1.0.7",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
     "npm-check-updates": "^17.1.14",
